@@ -46,8 +46,33 @@
       "type": "image/png"
     },
     {
+      "src": "./img/icon_72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
       "src": "./img/icon_64.png",
       "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icon_60.png",
+      "sizes": "60x60",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icon_57.png",
+      "sizes": "57x57",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icon_48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+	    {
+      "src": "./img/icon_36.png",
+      "sizes": "36x36",
       "type": "image/png"
     },
     {
