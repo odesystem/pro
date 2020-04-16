@@ -11,7 +11,7 @@
   "lang": "es-ES",
   "icons": [
     {
-      "src": "./img/icon_16.ico",
+      "src": "./img/icon_16.png",
       "sizes": "16x16",
       "type": "image/png",
 	  "purpose": "maskable"
