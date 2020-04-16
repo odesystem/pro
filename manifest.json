@@ -11,9 +11,9 @@
   "lang": "es-MX",
   "icons": [
     {
-      "src": "./img/icon_16.png",
+      "src": "./img/favicon.ico",
       "sizes": "16x16",
-      "type": "image/png"
+      "type": "image/x-icon"
     },
     {
       "src": "./img/icon_32.png",
