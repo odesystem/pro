@@ -11,9 +11,9 @@
   "lang": "es-ES",
   "icons": [
     {
-      "src": "./img/favicon.ico",
+      "src": "./img/icon_16.ico",
       "sizes": "16x16",
-      "type": "image/x-icon",
+      "type": "image/png",
 	  "purpose": "maskable"
     },
     {
