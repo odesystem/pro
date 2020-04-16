@@ -11,9 +11,9 @@
   "lang": "es-ES",
   "icons": [
     {
-      "src": "./img/odes.ico",
+      "src": "./img/icon_16.png",
       "sizes": "16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
     }
   ]
 }
