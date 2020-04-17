@@ -9,8 +9,8 @@ const CACHE_NAME = 'v1_cache_programador_fitness',
     'https://use.fontawesome.com/releases/v5.0.6/webfonts/fa-brands-400.woff2',
     './style.css',
     './script.js',
-    './img/ProgramadorFitness.png',
-    './img/favicon.png'
+    './img/odes.png',
+    './img/icon_16.png'
   ]
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
@@ -21,7 +21,7 @@ self.addEventListener('install', e => {
         return cache.addAll(urlsToCache)
           .then(() => self.skipWaiting())
       })
-      .catch(err => console.log('Falló registro de cache', err))
+      .catch(err => alert('Falló registro de cache', err))
   )
 })
 
