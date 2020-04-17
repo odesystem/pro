@@ -8,15 +8,9 @@ window.addEventListener("load", function(event) {
    }	
 
    document.getElementById("boton1").addEventListener("click", function(){
-       alert('Prueba !!!');
-	   window.document.title = 'Hola!';
+       //alert('Prueba !!!');
+	   document.getElementById("h_2").innerText = 'Hola !!!';
    });
 	
 });
-
-
-
-
-
-
 
