@@ -1,24 +1,65 @@
-const divInstall = document.getElementById('installContainer');
-const butInstall = document.getElementById('butInstall');
 
-/* Put code here */
+window.addEventListener("load", function(event) {
+   
+   var w_ingreso=0;
+   let w_entro=0;
+   let w_ct=0;
+   let deferredPrompt;
+   const boton = document.getElementById("boton1");
+   const hh_2 = document.getElementById("h_2");
+   
+   if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js')
+               .then(reg => w_ingreso=1)
+               .catch(err => alert('Error al tratar de registrar el sw', err))
+   }	
+   
+/*    if(deferredPrompt == null){
+	 alert('nulo')   ;
+   } */
+   
+   
+   window.addEventListener('beforeinstallprompt', (e) => {
+	 e.preventDefault();
+	 deferredPrompt = e;
+     boton.style.display = 'block';
+	 boton.style.display = 'block';
+	 boton.style.display = 'block';
+	 
+     boton.addEventListener ('click', () => {
+/* 	   if(deferredPrompt == null){
+		 alert('nulo')   ;
+	   }else{
+		   alert('no esta nulo')   ;
+	   }; */
+		deferredPrompt.prompt();
+		deferredPrompt.userChoice.then ((choiceResult) => {
+			if (choiceResult.outcome === 'accepted') {
+			  console.log ('El usuario aceptó la solicitud de A2HS');
+			} else  {
+			  console.log ('El usuario rechazó la solicitud de A2HS');
+			}
+			deferredPrompt = null;
+		});
+     });
+	 
+	 //w_entro=1;
+   });
+     
+ 	var actulizar = setInterval(function(){
+	   if(deferredPrompt == null){
+		 console.log('nulo');
+	   }else{
+		 boton.style.display = 'block';
+	     boton.style.display = 'block';
+	     boton.style.display = 'block';
+	   };
+	   //document.getElementById("act").click();
+	 },4000);
+	 
+/*    function TipoVentana() { 
+       return navigator.standalone || (window.matchMedia('(display-mode: standalone)').matches); 
+   } */
+	
+});
 
-
-
-/* Only register a service worker if it's supported */
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js');
-}
-
-/**
- * Warn the page must be served over HTTPS
- * The `beforeinstallprompt` event won't fire if the page is served over HTTP.
- * Installability requires a service worker with a fetch event handler, and
- * if the page isn't served over HTTPS, the service worker won't load.
- */
-if (window.location.protocol === 'http:') {
-  const requireHTTPS = document.getElementById('requireHTTPS');
-  const link = requireHTTPS.querySelector('a');
-  link.href = window.location.href.replace('http://', 'https://');
-  requireHTTPS.classList.remove('hidden');
-}

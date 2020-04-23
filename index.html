@@ -1,43 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Hola</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="./style.css">
-    <!-- Manifest -->
-    <link rel="manifest" href="./manifest.json">
-  </head>  
-  <body>
-    <h1>
-      Instalable
-    </h1>
-    
-    <p id="requireHTTPS" class="hidden">
-      <b>ALTO!</b> Esta pagina <b>debe</b> ser servida por HTTPS.
-      Please <a>reload this page via HTTPS</a>.
-    </p>
-    
-    <p>
-      Make me installable, follow the 
-      <a href="https://web.dev/installable/discover-installable/codelab-make-installable">instructions</a> here.
-    </p>
-    
-    <!-- Install button, hidden by default -->
-    <div id="installContainer" class="hidden">
-      <button id="butInstall" type="button">
-        Install
-      </button>
-    </div>
+<html lang="es">
 
-    <!-- import the webpage's javascript file -->
-    <script src="./script.js" defer></script>
-    
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <!-- <script src="https://button.glitch.me/button.js"></script> -->
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>OdeSystem</title>
+  
+  <meta name="description" content="Bienvenidos a ODESYSTEM">
+  <meta name="theme-color" content="#F0DB4F">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+<!--   <link rel="apple-touch-icon" href="./img/odes.png">
+  <link rel="apple-touch-startup-image" href="./img/odes.png"> -->
+  
+  <link rel="icon" type="image/x-icon" href="./img/icon_16.png" />
+<!--   <link rel="icon" type="image/png" sizes="16x16"   href="./img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32"   href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="36x36"   href="./img/favicon-36x36.png">
+  <link rel="icon" type="image/png" sizes="48x48"   href="./img/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="57x57"   href="./img/favicon-57x57.png">
+  <link rel="icon" type="image/png" sizes="60x60"   href="./img/favicon-60x60.png">
+  <link rel="icon" type="image/png" sizes="72x72"   href="./img/favicon-72x72.png">
+  <link rel="icon" type="image/png" sizes="96x96"   href="./img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="./img/favicon-144x144.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon-192x192.png"> -->
+  
+  <link rel="manifest" href="./manifest.json">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="Header">
+    <h1>ODESYSTEM</h1>
+	<!-- <h1 id='h_2'>Nada corre como el zorro VFP</h1> -->
+	<h1 id='h_2'>0</h1>
+    <img src="./img/odes.png" alt="OdeSystem">
+    <p>
+      Bienvenidos programadores VFP 9.0, donde te daré consejos para llevar una vida saludable y evitar el sedentarismo.
+      Recuerda... mente sana en cuerpo sano3.
+    </p>
+	<a id="act" href="http://localhost/webapp/">Actualizar</a>
+	<button type="button" id="boton1" style="display: none;">Instalar</button>
+  </header>
+  <script src="./script.js"></script>
+</body>
+
 </html>
